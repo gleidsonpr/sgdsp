@@ -1,0 +1,66 @@
+﻿@model trabalhoIntegrado22015.Models.PreAgendamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Agendamento online</h4>
+	
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoSangue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoSangue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.observacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.observacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataDePreferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataDePreferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jaAgendado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jaAgendado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPreAgendamento }) |
+   
+</p>

@@ -1,0 +1,141 @@
+﻿@model trabalhoIntegrado22015.Models.BolsaSangue
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pesquisar a bolsa</h2>
+<h4>Cadastrar exame da bolsa</h4>
+
+<meta name="viewport" content="width=device-width" />
+<title>Pesquisa</title>
+
+
+
+@using (Html.BeginForm())
+{
+    <p>Digite o codigo de barras</p>
+    <input type="text" name="codBarras" id="codBarras" placeholder="Digite aqui a pesquisa" />
+    <div><input type="submit" value="Buscar" class="btn btn-primary btn-large" /></div>
+
+}
+
+@if (Model != null)
+{
+    <div>
+        <h4>BolsaSangue</h4>
+       
+
+        <td>
+            @Html.ActionLink("Cadastrar novo exame", "PesquisarExame", new { id = Model.idBolsaSangue})
+        </td>
+
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Doador.nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doador.nome)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Doador.telefone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doador.telefone)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Doador.cpf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doador.cpf)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Doador.dataNascimento)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doador.dataNascimento)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Doador.sexo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doador.sexo)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Procedimento.descricaoProcedimento)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Procedimento.descricaoProcedimento)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Uct.nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Uct.nome)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Uct.telefone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Uct.telefone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Uct.cnpj)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Uct.cnpj)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Uct.cidade)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Uct.cidade)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.codBarrasBolsa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.codBarrasBolsa)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.dataColeta)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.dataColeta)
+            </dd>
+
+        </dl>
+    </div>
+
+}
+

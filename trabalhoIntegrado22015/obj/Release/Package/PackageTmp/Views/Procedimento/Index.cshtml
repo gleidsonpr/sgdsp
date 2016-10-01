@@ -1,0 +1,33 @@
+﻿@model IEnumerable<trabalhoIntegrado22015.Models.Procedimento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoProcedimento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descricaoProcedimento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProcedimento }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProcedimento }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProcedimento })
+        </td>
+    </tr>
+}
+
+</table>

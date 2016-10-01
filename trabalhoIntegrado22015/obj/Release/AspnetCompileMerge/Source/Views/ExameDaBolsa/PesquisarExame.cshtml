@@ -1,0 +1,50 @@
+﻿@model IEnumerable<trabalhoIntegrado22015.Models.Exame>
+
+@{
+    ViewBag.Title = "Pesquisar exame";
+}
+
+<h2>Pesquisar exame</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeExame)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.metodoExame)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observacao)
+        </th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeExame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.departamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.metodoExame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observacao)
+            </td>
+            <td>
+               
+                @Html.ActionLink("Selecionar exame", "PesquisarLaboratorio", new { id = item.idExame }) 
+               
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model trabalhoIntegrado22015.Models.Transferencia
+
+@{
+    ViewBag.Title = "Visualizar dados";
+}
+
+<h2>" VISUALIZAR TRANSFERENCIA</h2>
+
+<div>
+    
+	
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bolsa.codBarrasBolsa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bolsa.codBarrasBolsa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital.descricaoUct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital.descricaoUct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataTransferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataTransferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.observacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.observacoes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idTransferencia }) |
+    @Html.ActionLink("Retornar a lista", "Index")
+</p>

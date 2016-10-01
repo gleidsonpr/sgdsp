@@ -1,0 +1,64 @@
+﻿@model trabalhoIntegrado22015.Models.BolsaSangue
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Deseja deletar este cadastro?</h3>
+<div>
+    <h4>BolsaSangue</h4>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Procedimento.descricaoProcedimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Procedimento.descricaoProcedimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uct.descricaoUct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uct.descricaoUct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codBarrasBolsa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codBarrasBolsa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataColeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataColeta)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

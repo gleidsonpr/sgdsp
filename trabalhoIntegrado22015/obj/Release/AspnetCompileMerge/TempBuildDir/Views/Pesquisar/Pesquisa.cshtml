@@ -1,0 +1,74 @@
+﻿
+
+@model IEnumerable<trabalhoIntegrado22015.Models.Doador>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pesquisar Exames</h2>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Pesquisa</title>
+
+
+    
+        @using (Html.BeginForm())
+        {
+            <p>Digite o nome do doador</p>
+            <input type="text" name="texto" id="texto" placeholder="Digite a pesquisa" />
+    <br />
+                    <div><input type="submit" value="Pequisar" class="btn btn-primary btn-large" /></div>
+            
+        }
+    
+
+    
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDoSangue.tipoDeSangue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoDoador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone)
+            </th>
+            <th></th>
+        </tr>
+        @{
+            if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoDoSangue.tipoDeSangue)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tipoDoador)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.telefone)
+                        </td>
+                        <td>
+                          
+                            @Html.ActionLink("Detailhes de exames", "Details", new { id = item.idDoador }) |
+                          
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+
+
+
+
+

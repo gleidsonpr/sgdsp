@@ -1,0 +1,143 @@
+﻿@model trabalhoIntegrado22015.Models.Laboratorio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Visualizar dados do laboratório</h2>
+
+<div>
+    <p>Detalhes do Laboratorio CSU_10 MANTER CADASTRO DE LABORATÓRIOS</p>
+	
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoLaboratorio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoLaboratorio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataFundacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataFundacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+
+<fieldset>
+    
+    <h2>Exames disponibilizados por este laboratório</h2>
+    <ul>
+      
+
+        @Html.ActionLink("Gerenciar exames", "Index", new {  controller = "CadExame" }) 
+        <br />  
+        @Html.ActionLink("Cadastrar novos exames", "Create", new { id = Model.idLaboratorio, controller = "CadExame" })
+
+
+
+        <h4>  Exames realizados por este laboratório  </h4>
+        @foreach (var exame in Model.ExameLaboratorios)
+            {
+
+
+                <li>@exame.Exame.nomeExame @exame.Exame.metodoExame</li>
+                
+
+            }
+
+       
+
+    </ul>
+</fieldset>
+
+
+<p>
+    
+    @Html.ActionLink("Retornar a pagina de pesquisa", "Index")
+</p>

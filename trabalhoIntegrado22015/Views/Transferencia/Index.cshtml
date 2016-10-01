@@ -1,0 +1,51 @@
+﻿@model IEnumerable<trabalhoIntegrado22015.Models.Transferencia>
+
+@{
+    ViewBag.Title = "transferencia de bolsa";
+}
+
+<h2>Transferencia de bolsa</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo", "Create", null, new { @class = "btn btn-primary btn-large" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bolsa.codBarrasBolsa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital.descricaoHospital)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataTransferencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observacoes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bolsa.codBarrasBolsa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital.descricaoHospital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataTransferencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observacoes)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idTransferencia }) |
+            @Html.ActionLink("Visualizar", "Details", new { id=item.idTransferencia }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.idTransferencia })
+        </td>
+    </tr>
+}
+
+</table>

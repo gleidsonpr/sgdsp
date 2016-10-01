@@ -1,0 +1,113 @@
+﻿@model IEnumerable<trabalhoIntegrado22015.Models.Questionario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Questionario de avaliação do doador</h2>
+
+<p>
+    @Html.ActionLink("Novo Questionario", "Create", null, new { @class = "btn btn-primary btn-large" })
+
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fuma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qntCigarros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bebe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qntBebidasSemana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.possuiTatuagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qntTempoTatuagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.utilizaDrogaIlicita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoDrogras)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.historicoDeDoenca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoDoencas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hepatite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jejum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataQuestionario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doador.TipoDoSangue.tipoDeSangue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fuma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qntCigarros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bebe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qntBebidasSemana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.possuiTatuagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qntTempoTatuagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.utilizaDrogaIlicita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descricaoDrogras)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.historicoDeDoenca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descricaoDoencas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hepatite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jejum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataQuestionario)
+        </td>
+        <td>
+            @Html.ActionLink("Editar questionario", "Edit", new { id=item.idQuestionario }) |
+            @Html.ActionLink("Detailhes de questionario", "Details", new { id=item.idQuestionario }) |
+            @Html.ActionLink("Deletar questionario", "Delete", new { id=item.idQuestionario })
+        </td>
+    </tr>
+}
+
+</table>

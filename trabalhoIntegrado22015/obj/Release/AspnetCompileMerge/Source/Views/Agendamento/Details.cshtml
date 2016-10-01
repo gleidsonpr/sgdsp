@@ -1,0 +1,50 @@
+﻿@model trabalhoIntegrado22015.Models.Agendamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detailhes de agendamento</h2>
+
+<div>
+    <h4>Agendamento</h4>
+	
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Doador.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doador.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uct.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uct.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.observacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.observacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataAgendada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataAgendada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar Agendamento", "Edit", new { id = Model.idAgendamento }) |
+    @Html.ActionLink("Voltar para lista", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model trabalhoIntegrado22015.Models.Campanha
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detaillhes da campanha de doação</h2>
+
+<div>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.uct.descricaoUct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uct.descricaoUct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomeCampanha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomeCampanha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCampanhaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCampanhaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCampanhaFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCampanhaFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoCampanha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoCampanha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar campanha de doação", "Edit", new { id = Model.idCampanha }) |
+    @Html.ActionLink("Voltar para lista", "Index")
+</p>

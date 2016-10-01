@@ -1,0 +1,32 @@
+﻿@model trabalhoIntegrado22015.Models.Procedimento
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Deseja deletar este cadastro?</h3>
+<div>
+    <h4>Procedimento</h4>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoProcedimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoProcedimento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para lista", "Index")
+        </div>
+    }
+</div>

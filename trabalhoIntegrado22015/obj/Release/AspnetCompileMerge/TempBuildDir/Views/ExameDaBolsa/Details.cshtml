@@ -1,0 +1,50 @@
+﻿@model trabalhoIntegrado22015.Models.ExameDaBolsa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ExameDaBolsa</h4>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bolsa.codBarrasBolsa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bolsa.codBarrasBolsa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExameFeito.nomeExame)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExameFeito.nomeExame)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laboratorio.descricaoLaboratorio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laboratorio.descricaoLaboratorio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.observacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.observacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idExameDaBolsa }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

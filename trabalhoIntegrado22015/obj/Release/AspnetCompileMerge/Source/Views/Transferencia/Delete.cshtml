@@ -1,0 +1,56 @@
+﻿@model trabalhoIntegrado22015.Models.Transferencia
+
+@{
+    ViewBag.Title = "Deletar transferencia";
+}
+
+<h2>Deletar transferencia</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bolsa.codBarrasBolsa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bolsa.codBarrasBolsa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital.descricaoUct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital.descricaoUct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataTransferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataTransferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.observacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.observacoes)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("voltar a lista", "Index")
+        </div>
+    }
+</div>

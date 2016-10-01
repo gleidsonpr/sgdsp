@@ -1,0 +1,130 @@
+﻿@model trabalhoIntegrado22015.Models.Questionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Questionario</h4>
+	
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doador.TipoDoSangue.tipoDeSangue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fuma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fuma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qntCigarros)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qntCigarros)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bebe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bebe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qntBebidasSemana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qntBebidasSemana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.possuiTatuagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.possuiTatuagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qntTempoTatuagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qntTempoTatuagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.utilizaDrogaIlicita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.utilizaDrogaIlicita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoDrogras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoDrogras)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.historicoDeDoenca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.historicoDeDoenca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoDoencas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoDoencas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hepatite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hepatite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jejum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jejum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataQuestionario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataQuestionario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idQuestionario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

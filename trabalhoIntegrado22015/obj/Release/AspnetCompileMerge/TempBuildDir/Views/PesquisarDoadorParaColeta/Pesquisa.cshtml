@@ -1,0 +1,74 @@
+﻿
+
+@model IEnumerable<trabalhoIntegrado22015.Models.Doador>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pesquisar o doador</h2>
+<h4>Cadastrar bolsa de sangue da coleta CSU_012-REGISTRAR COLETA</h4>
+
+ 
+
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Pesquisa</title>
+
+
+    
+        @using (Html.BeginForm())
+        {
+            <p>Digite o CPF do doador</p>
+            <input type="text" name="cpf" id="cpf" placeholder="Digite a pesquisa" />
+    <br />
+            <div><input type="submit" value="Buscar" class="btn btn-primary btn-large" /></div>
+        }
+    
+<hr />
+
+
+    
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.tipoDoador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
+            </th>
+            <th></th>
+        </tr>
+        @{
+            if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nome)
+                        </td>
+                       
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tipoDoador)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.cpf)
+                        </td>
+                        <td>                         
+                            @Html.ActionLink("Cadastrar nova coleta", "Create", new { id = item.idDoador, controller = "Bolsa" })
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+
+
+
+
+

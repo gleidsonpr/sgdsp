@@ -1,0 +1,53 @@
+﻿@model trabalhoIntegrado22015.Models.Transferencia
+
+@{
+    ViewBag.Title = "Cadastrar transferencia";
+}
+
+<h2>Cadastrar transferencia</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Transferencia</h4>
+        
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idHospital, "idHospital", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idHospital", String.Empty)
+                @Html.ValidationMessageFor(model => model.idHospital)
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            @Html.LabelFor(model => model.dataTransferencia, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dataTransferencia)
+                @Html.ValidationMessageFor(model => model.dataTransferencia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.observacoes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.observacoes)
+                @Html.ValidationMessageFor(model => model.observacoes)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar a lista", "Index")
+</div>

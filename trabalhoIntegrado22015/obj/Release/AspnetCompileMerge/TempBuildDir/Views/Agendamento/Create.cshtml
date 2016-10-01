@@ -1,0 +1,64 @@
+﻿@model trabalhoIntegrado22015.Models.Agendamento
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastrar agendamento</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.observacao, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.observacao)
+                @Html.ValidationMessageFor(model => model.observacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.dataAgendada, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dataAgendada)
+                @Html.ValidationMessageFor(model => model.dataAgendada)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idDoador, "Nome do Doador", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idDoador", String.Empty)
+                @Html.ValidationMessageFor(model => model.idDoador)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idUct, "Nome UCT", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idUct", String.Empty)
+                @Html.ValidationMessageFor(model => model.idUct)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar para lista", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

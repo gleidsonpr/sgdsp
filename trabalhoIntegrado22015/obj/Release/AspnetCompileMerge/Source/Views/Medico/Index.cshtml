@@ -1,0 +1,181 @@
+﻿@model trabalhoIntegrado22015.Models.Medico
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastrar médico</h2>
+<p>Doadores cadastradados CSU_004-MANTER CADASTRO DE PESSOAS</p>
+
+
+
+
+<div class="form-horizontal">
+    
+    
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+
+                <p>
+                    <meta name="viewport" content="width=device-width" />
+                    <title>Pesquisa</title>
+
+
+                    @using (Html.BeginForm())
+                    {
+                        <div class="col-md-4">
+                    <p>Digite o crm do medico</p>
+                    <div><input type="text" name="crm" id="crm" placeholder="Digite a pesquisa" /></div>
+                    <br />
+                    <div><input type="submit" value="Buscar" class="btn btn-primary btn-large" /></div>
+
+                </div>
+
+
+                        <div class="col-md-4">
+                            <p>Cadastrar Medico</p>
+                            <p>
+                                @Html.ActionLink("Cadastrar novo Medico", "Create", null, new { @class = "btn btn-primary btn-large" })
+                            </p>
+                        </div>
+
+
+                    }
+
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        
+
+        </div>
+
+        @if (Model != null)
+        {
+           <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.crm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.crm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataNascimento)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+    
+            <div>@Html.ActionLink("Editar cadastro de médicos", "Edit", new { id = Model.idMedico })</div>
+            <br />
+            <div> @Html.ActionLink("Deleta cadastro de médicos", "Delete", new { id = Model.idMedico })  </div>
+
+        }

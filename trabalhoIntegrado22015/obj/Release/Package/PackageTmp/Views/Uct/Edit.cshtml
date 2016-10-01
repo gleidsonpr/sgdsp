@@ -1,0 +1,128 @@
+﻿@model trabalhoIntegrado22015.Models.Uct
+
+@{
+    ViewBag.Title = "Editar cadastro de UCT";
+}
+
+<h2>Editar cadastro de UCT</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.idUct)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descricaoUct, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descricaoUct)
+                @Html.ValidationMessageFor(model => model.descricaoUct)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cnpj, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cnpj)
+                @Html.ValidationMessageFor(model => model.cnpj)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.dataFundacao, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dataFundacao)
+                @Html.ValidationMessageFor(model => model.dataFundacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nome, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nome)
+                @Html.ValidationMessageFor(model => model.nome)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.telefone, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.telefone)
+                @Html.ValidationMessageFor(model => model.telefone)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.rua, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.rua)
+                @Html.ValidationMessageFor(model => model.rua)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.numero, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.numero)
+                @Html.ValidationMessageFor(model => model.numero)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.complemento, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.complemento)
+                @Html.ValidationMessageFor(model => model.complemento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.bairro, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.bairro)
+                @Html.ValidationMessageFor(model => model.bairro)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cep, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cep)
+                @Html.ValidationMessageFor(model => model.cep)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cidade, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cidade)
+                @Html.ValidationMessageFor(model => model.cidade)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.estado, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.estado)
+                @Html.ValidationMessageFor(model => model.estado)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar cadastro da UCT" class="btn btn-primary btn-large" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

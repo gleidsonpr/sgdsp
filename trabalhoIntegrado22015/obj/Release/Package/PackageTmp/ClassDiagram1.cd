@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="trabalhoIntegrado22015.Models.BolsaSangue" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECCAAAAQAIABAQAAAAAAAAAAEAgAAAAAAAAABAAE=</HashCode>
+      <FileName>Models\BolsaSangue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Campanha" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEAAAAAAAAAAAEAAAAAAAAAIAEAAAAAAAAAAAAAQE=</HashCode>
+      <FileName>Models\Campanha.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Doador" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Doador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Exame" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAACAAIAAEAAAgAAAAAAAAAAAIgA=</HashCode>
+      <FileName>Models\Exame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Funcionario" Collapsed="true">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAgAAQAAAAA=</HashCode>
+      <FileName>Models\Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Laboratorio" Collapsed="true">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Models\Laboratorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Pessoa" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACggAIAAAAIAAAAAABAAAAAAAgAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.PessoaFisica" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAIAAAAgAAIgAAAAAAAAQAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\PessoaFisica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.PessoaJuridica" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Models\PessoaJuridica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Procedimento" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Procedimento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Receptor" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\Receptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Transferencia">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAIAQAIAAQAAAAAABAAAAAAAAAAAAAAACAIAA=</HashCode>
+      <FileName>Models\Transferencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Uct" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAEAIAAAAABAAAAAAAAAAAAAAIAE=</HashCode>
+      <FileName>Models\Uct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="trabalhoIntegrado22015.Models.Agendamento" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAQAAAAQAAAAAAAAAAAAAAABAACAAAABAE=</HashCode>
+      <FileName>Models\Agendamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

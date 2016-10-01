@@ -1,0 +1,26 @@
+﻿@model trabalhoIntegrado22015.Models.Procedimento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Procedimento</h4>
+	
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoProcedimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoProcedimento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idProcedimento }) |
+    @Html.ActionLink("Voltar para lista", "Index")
+</p>

@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "Painel";
+}
+
+<h2>Painel do funcionário</h2>
+
+
+
+<div class="row">
+ 
+    <div class="col-md-4">
+        <h2>Laboratório</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Laboratório", "Create", "Laboratorio", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Laboratório", "Index", "Laboratorio", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Hospital</h2>
+        <p>
+           @Html.ActionLink("Cadastrar Hospital", "Create", "Hospital", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+           @Html.ActionLink("Pesquisar Hospital", "Index", "Hospital", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+   
+    </div>
+    <div class="col-md-4">
+        <h2>Uct</h2>
+        <p>
+          @Html.ActionLink("Cadastrar Uct", "Create", "Uct", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+          @Html.ActionLink("Pesquisar Uct", "Index", "Uct", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+      
+    </div>
+
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>Funcionario</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Funcionario", "Create", "Funcionario", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Funcionario", "Index", "Funcionario", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Medico</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Medico", "Create", "Medico", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Medico", "Index", "Medico", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Doador</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Doador", "Create", "Doador", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Doador", "Index", "Doador", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>Agendamento</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Agendamento", "Create", "Agendamento", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Agendamento", "Index", "Agendamento", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Procedimento</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Procedimento", "Create", "Procedimento", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Procedimento", "Index", "Procedimento", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Campanha</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Campanha", "Create", "Campanha", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Campanha", "Index", "Campanha", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Questionario</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Questionario", "Create", "Questionario", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+            @Html.ActionLink("Pesquisar Questionario", "Index", "Questionario", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+
+    <div class="col-md-4">
+        <h2>Exames</h2>
+        <p>
+            @Html.ActionLink("Cadastrar Exames na bolsa", "Index", "ExameDaBolsa", null, new { @class = "btn btn-primary btn-large" })
+            <br />
+            <br />
+           
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Coleta</h2>
+        <p>
+           
+            <br />
+            <br />
+            @Html.ActionLink("Cadastrar Coleta", "Pesquisa", "PesquisarDoadorParaColeta", null, new { @class = "btn btn-primary btn-large" })
+        </p>
+
+    </div>
+
+
+
+</div>

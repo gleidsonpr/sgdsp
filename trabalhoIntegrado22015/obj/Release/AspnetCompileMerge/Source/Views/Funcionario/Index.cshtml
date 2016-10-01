@@ -1,0 +1,229 @@
+﻿@model trabalhoIntegrado22015.Models.Funcionario
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pesquisar funcionário</h2>
+
+
+
+
+<div class="form-horizontal">
+    
+    <p>Lista dos funcionarios cadastrados CSU_004-MANTER CADASTRO DE PESSOAS</p>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <meta name="viewport" content="width=device-width" />
+                    <title>Pesquisa</title>
+
+
+
+                    @using (Html.BeginForm())
+                    {
+                        <div class="col-md-4">
+                    <p>Digite o cpf do funcionario</p>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite a pesquisa" />
+                    <p>
+                        <br />
+                        <input type="submit" value="Buscar funcionario" class="btn btn-primary btn-large" />
+                    </p>
+                </div>
+                        <div class="col-md-4">
+                            <p>Cadastrar funcionário</p>
+                            <br />
+                            <p>
+                                @Html.ActionLink("Cadastrar novo funcionario", "Create", null, new { @class = "btn btn-primary btn-large" })
+                            </p>
+                        </div>
+
+                    }
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+
+
+
+
+        }
+
+
+
+        @if (Model != null)
+{
+    
+           <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.matriculaFuncionario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matriculaFuncionario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataAdmimissao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataAdmimissao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.registroProssional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.registroProssional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataNascimento)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+               
+            <br />
+            <br />
+            
+            <div>@Html.ActionLink("Editar cadastro de funcionario", "Edit", new { id = Model.idFuncionario })</div>
+            <div> @Html.ActionLink("Deletar cadastro de funcionario", "Delete", new { id = Model.idFuncionario })  </div>
+
+
+        }
+
+
+
+
+
+
+

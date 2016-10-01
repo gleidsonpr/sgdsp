@@ -1,0 +1,140 @@
+﻿@model trabalhoIntegrado22015.Models.Questionario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Questionario</h4>
+        
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.idDoador, "Nome do doador", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("idDoador", String.Empty)
+                @Html.ValidationMessageFor(model => model.idDoador)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fuma, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fuma)
+                @Html.ValidationMessageFor(model => model.fuma)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.qntCigarros, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.qntCigarros)
+                @Html.ValidationMessageFor(model => model.qntCigarros)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.bebe, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.bebe)
+                @Html.ValidationMessageFor(model => model.bebe)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.qntBebidasSemana, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.qntBebidasSemana)
+                @Html.ValidationMessageFor(model => model.qntBebidasSemana)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.possuiTatuagem, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.possuiTatuagem)
+                @Html.ValidationMessageFor(model => model.possuiTatuagem)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.qntTempoTatuagem, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.qntTempoTatuagem)
+                @Html.ValidationMessageFor(model => model.qntTempoTatuagem)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.utilizaDrogaIlicita, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.utilizaDrogaIlicita)
+                @Html.ValidationMessageFor(model => model.utilizaDrogaIlicita)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descricaoDrogras, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descricaoDrogras)
+                @Html.ValidationMessageFor(model => model.descricaoDrogras)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.historicoDeDoenca, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.historicoDeDoenca)
+                @Html.ValidationMessageFor(model => model.historicoDeDoenca)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descricaoDoencas, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descricaoDoencas)
+                @Html.ValidationMessageFor(model => model.descricaoDoencas)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.hepatite, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.hepatite)
+                @Html.ValidationMessageFor(model => model.hepatite)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.jejum, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.jejum)
+                @Html.ValidationMessageFor(model => model.jejum)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.dataQuestionario, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dataQuestionario)
+                @Html.ValidationMessageFor(model => model.dataQuestionario)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

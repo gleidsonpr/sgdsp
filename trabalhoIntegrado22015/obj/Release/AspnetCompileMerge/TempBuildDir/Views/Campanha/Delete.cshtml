@@ -1,0 +1,64 @@
+﻿@model trabalhoIntegrado22015.Models.Campanha
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar campanha de doação</h2>
+
+<h3>Deseja deletar este cadastro?</h3>
+<div>
+   
+ 
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.uct.descricaoUct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uct.descricaoUct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomeCampanha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomeCampanha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCampanhaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCampanhaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCampanhaFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCampanhaFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoCampanha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoCampanha)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-primary btn-large" /> |
+            @Html.ActionLink("Voltar para lista", "Index")
+        </div>
+    }
+</div>

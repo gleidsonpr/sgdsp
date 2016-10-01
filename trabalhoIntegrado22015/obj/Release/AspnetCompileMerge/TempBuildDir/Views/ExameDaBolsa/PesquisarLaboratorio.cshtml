@@ -1,0 +1,61 @@
+﻿
+@model IEnumerable<trabalhoIntegrado22015.Models.Laboratorio>
+
+@{
+    ViewBag.Title = "PesquisarLaboratorio";
+}
+
+<h2>Laboratorios</h2>
+
+<h4>Lista de laboratorios que fazem este exame</h4>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rua)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cidade)
+        </th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cidade)
+            </td>
+            <td>
+               
+                @Html.ActionLink("Selecionar laboratorio", "Create", new { id = item.idLaboratorio })
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+
+
+
+             

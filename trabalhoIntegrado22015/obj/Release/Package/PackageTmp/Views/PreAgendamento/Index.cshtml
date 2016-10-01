@@ -1,0 +1,64 @@
+﻿@model IEnumerable<trabalhoIntegrado22015.Models.PreAgendamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista</h2>
+<h4>Agendamento online</h4>
+
+<p>
+    @Html.ActionLink("Cadastrar novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoSangue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataDePreferencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jaAgendado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoSangue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataDePreferencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jaAgendado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPreAgendamento }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPreAgendamento }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPreAgendamento })
+        </td>
+    </tr>
+}
+
+</table>
